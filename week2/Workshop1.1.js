@@ -1,15 +1,15 @@
-// ประกาศตัวแปรเก็บข้อมูลส่วนตัว 5 อย่าง (ห้ามใช้ var)
+// ประกาศตัวแปรเก็บข้อมูลส่วนตัว 5 ข้อมูล (ไม่ใช้ var)
 const nickname = "ปรเมศวรื";
 const studentId = "67111311";
 const age = "21";
 const major = "วิศวกรรมคอมพิวเตอร์";
-const registeredCourses = "7";
+const registeredCourses = "6";
 
 // ประกาศตัวแปรสำหรับคำนวณปีที่จะจบการศึกษา
 const currentBaseYear = 2567;
 const remainingYears = 2;
 
-// แสดงผลด้วย Template Literal (ห้ามใช้ + ต่อข้อความ)
+// แสดงผลด้วย Template Literal ที่อาจารย์ให้มา(ไม่ใช้ + ต่อข้อความ)
 console.log(`===== บัตรแนะนำตัว =====
 ชื่อเล่น       : ${nickname}
 รหัสนักศึกษา   : ${studentId}
