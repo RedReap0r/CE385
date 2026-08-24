@@ -8,21 +8,21 @@ const finalExam = 24;
 // เก็บตัวแปรที่เป็นค่าคงที่เอาไว้สำหรับแปลงคะแนนWorkshop
 const workshopRawMax = 60;
 const workshopWeight = 20;
-const MaxTotal = 100;
-const TargetScore = 80;
+const maxTotal = 100;
+const targetScore = 80;
 
 // ส่วนที่ 2: คำนวณคะแนนWorkshop
 // แปลงคะแนน Workshop ตามสูตร
 const workshopScore = (workshopRaw / workshopRawMax) * workshopWeight;
 
 // คำนวณคะแนนรวม
-const TotalScore = workshopScore + attendance + project + midterm + finalExam;
+const totalScore = workshopScore + attendance + project + midterm + finalExam;
 
 // คำนวณคะแนนรวมเป็นเปอร์เซ็น
-const TotalScorePercent = (TotalScore / MaxTotal) * 100;
+const totalScorePercent = (totalScore / maxTotal) * 100;
 
 // คำนวณว่าขาดอีกกี่คะแนนถึงจะได้ 80 คะแนน
-const ScoreToTarget = TargetScore - TotalScore;
+const scoreToTarget = targetScore - totalScore;
 
 // ส่วนที่ 3: แสดงผลลัพธ์
 console.log(`===== ใบสรุปคะแนนวิชา CE385 =====
@@ -32,7 +32,7 @@ console.log(`===== ใบสรุปคะแนนวิชา CE385 =====
 คะแนนสอบกลางภาค          : ${midterm.toFixed(2)}
 คะแนนสอบปลายภาค          : ${finalExam.toFixed(2)}
 ---------------------------------
-คะแนนรวมทั้งหมด            : ${TotalScore.toFixed(2)} / ${MaxTotal}
-คิดเป็นเปอร์เซ็นต์           : ${TotalScorePercent.toFixed(2)}%
-ขาดอีกเพื่อให้ได้ ${TargetScore} คะแนน    : ${ScoreToTarget.toFixed(2)}
+คะแนนรวมทั้งหมด            : ${totalScore.toFixed(2)} / ${maxTotal}
+คิดเป็นเปอร์เซ็นต์           : ${totalScorePercent.toFixed(2)}%
+ขาดอีกเพื่อให้ได้ ${targetScore} คะแนน    : ${scoreToTarget.toFixed(2)}
 =================================`);
