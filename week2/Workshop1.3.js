@@ -12,16 +12,16 @@ const maxTotal = 100;
 const targetScore = 80;
 
 // ส่วนที่ 2: คำนวณคะแนนWorkshop
-// แปลงคะแนน Workshop ตามสูตร
+// แปลงคะแนน Workshop ตามสูตร โดยนำคะแนนดิบหารด้วยคะแนนเต็ม แล้วคูณด้วยน้ำหนัก
 const workshopScore = (workshopRaw / workshopRawMax) * workshopWeight;
 
-// คำนวณคะแนนรวม
+// คำนวณคะแนนรวม โดยนำคะแนนทุกส่วนที่ผ่านการปรับสัดส่วนแล้วมาบวกกัน
 const totalScore = workshopScore + attendance + project + midterm + finalExam;
 
 // คำนวณคะแนนรวมเป็นเปอร์เซ็น
 const totalScorePercent = (totalScore / maxTotal) * 100;
 
-// คำนวณว่าขาดอีกกี่คะแนนถึงจะได้ 80 คะแนน
+// คำนวณว่าขาดอีกกี่คะแนนถึงจะได้ 80 คะแนน โดยนำ 80คะแนนมาลบด้วยคะแนนรวม
 const scoreToTarget = targetScore - totalScore;
 
 // ส่วนที่ 3: แสดงผลลัพธ์
