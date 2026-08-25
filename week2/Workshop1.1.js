@@ -1,5 +1,5 @@
 // ประกาศตัวแปรเก็บข้อมูลส่วนตัว 5 ข้อมูล (ไม่ใช้ var)
-const nickname = "ปรเมศวรื";
+const nickname = "เมฆ";
 const studentId = "67111311";
 const age = "21";
 const major = "วิศวกรรมคอมพิวเตอร์";
