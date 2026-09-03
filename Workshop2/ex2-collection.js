@@ -18,6 +18,7 @@ export const findByMajor = (studentsArray, major) => studentsArray.filter(s => s
 export const hasFailingStudent  = (studentsArray) => studentsArray.some(s => s.score < 50);
 
 
+// getEmail: รับอาร์เรย์ของนักศึกษาและรหัสนักศึกษา แล้วคืนค่าอีเมลของนักศึกษาคนนั้น (ถ้าไม่พบให้คืนค่า "ไม่พบข้อมูลนักศึกษา")
 export const getEmail = (studentsArray, id) => {
     const student = findById(studentsArray, id);
 
