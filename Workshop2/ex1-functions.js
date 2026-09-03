@@ -1,7 +1,7 @@
 // ตรวจสอบคะแนน (0-100)
 export const isValidScore = (score) => typeof score === 'number' && score >= 0 && score <= 100;
 
-// เกณฑ์การตัดเกรดเก็บเป็น
+// เกณฑ์การตัดเกรดเก็บเป็นอาร์เรย์ของอ็อบเจ็กต์ (เรียงจากคะแนนสูงไปต่ำ)
 const GRADE_RULE = [
     {min: 80, grade: 'A'},
     {min: 75, grade: 'B+'},
