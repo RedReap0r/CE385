@@ -55,12 +55,18 @@ todoRouter.get("/:id", (req, res) => {
 
 // สร้าง todo ใหม่ หลังจากผ่าน middleware validateTodo แล้ว
 todoRouter.post("/", validateTodo, (req, res) => {
+
+    // ดึงข้อมูลรายการสุดท้ายใน Array ออกมา
+    const lastTodo = TODOS[TODOS.length - 1];
+
+    // เอา ID ของรายการสุดท้ายมาแปลงเป็นตัวเลข แล้วบวก 1 จากนั้นแปลงกลับเป็น String
+    const nextId = String(Number(lastTodo.id) + 1);
+
+
     const created = {
-        id: String(TODOS.length + 1 ), 
+        id: nextId, 
         title: req.body.title,         
         done: false,                   
-        
-        
         priority: req.body.priority ?? "normal", 
     };
     
